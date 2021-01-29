@@ -32,10 +32,10 @@ Desarrollar un programa de consola .NET Core en C#, que lea un fichero .csv alma
 ## Arquitectura
 
 ### Diagramas
-poner diagramas de secuencia, uml, etc
+https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/arquitectura.png
 
-### Modelo de datos
-Poner diseño de entidades, Jsons, tablas, diagramas entidad relación, etc..
+### Logica
+https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/logica.png
 
 ---
 ## Limitaciones
