@@ -149,6 +149,63 @@
             outputFile.Close();
         }
 
+        public List<StockItem> LoadFileInMemory(string pach)
+        {
+            var listItems = new List<StockItem>();
+
+            using (var streamRdr = new StreamReader(pach))
+            {
+                var csvReader = new CsvReader(streamRdr, ";");
+                var item = new StockItem();
+                var aux = false;
+
+                while (csvReader.Read())
+                {
+                    item = new StockItem();
+
+                    for (int j = 0; j < csvReader.FieldsCount; j++)
+                    {
+                        if (aux)
+                            switch (j)
+                            {
+                                case 0:
+                                    item.PointOfSale = int.Parse(csvReader[j]);
+                                    break;
+                                case 1:
+                                    item.Product = csvReader[j];
+                                    break;
+                                case 2:
+                                    item.Date = DateTime.Parse(csvReader[j]);
+                                    break;
+                                case 3:
+                                    item.Stock = int.Parse(csvReader[j]);
+                                    break;
+                                default:
+                                    break;
+                            }
+                    }
+
+                    if (aux)
+                        listItems.Add(item);
+                    else
+                        aux = true;
+                }
+            }
+
+            return listItems;
+        }
+
+        public async Task MigrationBlob(List<StockItem> listItems)
+        {
+
+            using (DataContext context = new DataContext())
+            {
+                // Creamos una DB en limpio 
+                await context.BulkInsertAsync(listItems);
+
+            }
+
+        }
         private double GetProgressPercentage(double totalSize, double currentSize)
         {
             return Math.Round(((currentSize / totalSize) * 100));
