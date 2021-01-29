@@ -43,7 +43,8 @@ Desarrollar un programa de consola .NET Core en C#, que lea un fichero .csv alma
 - Sql server 2017 o superior
 ---
 ## Configurar el marco de la aplicación
-###Copie sus credenciales del portal de Azure
+
+### Copie sus credenciales del portal de Azure
 
 - Cuando la aplicación de muestra realiza una solicitud a Azure Storage, debe estar autorizada. Para autorizar una solicitud, agregue las credenciales de su cuenta de almacenamiento a la aplicación como una cadena de conexión. Vea las credenciales de su cuenta de almacenamiento siguiendo estos pasos:
 
