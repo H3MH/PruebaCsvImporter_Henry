@@ -17,6 +17,11 @@ namespace CsvImporter.Shell
         {
             try
             {
+                using (DataContext context = new DataContext())
+                {
+                    // Creamos una DB en limpio 
+                    context.Database.EnsureCreated();
+                }
                 Menu().GetAwaiter().GetResult();
             }
             catch (Exception ex)
@@ -34,6 +39,7 @@ namespace CsvImporter.Shell
             {
 
                 BlobServiceClient blobServiceClient = new BlobServiceClient(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ToString());
+                Console.Clear();
                 Console.WriteLine("Bienvenido a CsvImporter");
                 Console.WriteLine($"Blob: {blobServiceClient.AccountName}");
                 Console.WriteLine("Lista de Contenedores");
@@ -72,7 +78,7 @@ namespace CsvImporter.Shell
                 #endregion
 
                 if (resp.ToUpper() == "S")
-                    CleanDB();
+                    await CleanDB();
 
                 #region migrate the data to the database
                 var itemsList = azure.LoadFileInMemory(filePath);
@@ -125,13 +131,13 @@ namespace CsvImporter.Shell
             #endregion
         }
 
-        private static void CleanDB()
+        private static async Task CleanDB()
         {
             using (DataContext context = new DataContext())
             {
                 // Creamos una DB en limpio 
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                await context.Database.EnsureDeletedAsync();
+                await context.Database.EnsureCreatedAsync();
             }
         }
 

@@ -20,7 +20,7 @@
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString, b => b.MigrationsAssembly("pruebaCsv"))
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString)
                 .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
             base.OnConfiguring(optionsBuilder);
         }

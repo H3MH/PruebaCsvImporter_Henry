@@ -12,6 +12,7 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.1.15" />
   </ItemGroup>
 
 </Project>
