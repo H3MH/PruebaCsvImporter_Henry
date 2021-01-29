@@ -68,20 +68,42 @@ por otra parte en el archivo app.config de la aplicacion <DefaultConnection> deb
 2.	Mostrar mensaje de conexion
 
 3.	Listar los contenedores 
-4.	Pedir seleccionar un cotenedor o url para migragar
-5.	Si selecciona un contenedor listar los archivos del contenedor 
-6.	permitir seleccionar archivos .csv  de los archivos listados
-7.	Si selecione url permitir ingresar una url y salto a paso 8
-8.	Mostrar mensaje de advertencia de que el archivo debe seguir el modelo diseñado
-9.	Una vez seleccionado descargar el archivo
-10.	Mostrar progreso de descarga
-11.	Mostrar mensaje de carga en memoria del archivo para migrar
-12.	Preguntar si desea realizar limpieza de la tabla antes de realizar la migración
-13.	Si responde que si se limpia la tabla en la db 
-14.	Si responde que no salto a paso 15
-15.	Se muestra mensaje de inicio de migración de la información
-16.	Se muestra mensaje una vez finalizado el proceso de migración
-17.	Se presiona tecla para cerrar el programa
+4.	Pedir seleccionar un cotenedor 
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/Saliudo.png)
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/contenedor.png)
+
+5.	Si selecciona un contenedor listar los archivos del contenedor como se muestra en la imagen 
+
+6. permite seleccionar archivos .csv de los archivos listados, colocando el numero correspondiente al mismo en la lista
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/ListaArchivos.png)
+
+7.	Mostrar mensaje de advertencia de que el archivo debe seguir el modelo diseñado
+8.	Una vez seleccionado descargar el archivo
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/Archivo.png)
+
+9.	muestra progreso de descarga
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/descarga.png)
+
+10.	muestra mensaje de carga en memoria del archivo para migrar
+11.	Preguntar si desea realizar limpieza de la tabla antes de realizar la migración
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/Limpieza.png)
+
+12.	pregunta si se desea limpiar la db antes de la migracion
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/limpiezaLista.png)
+
+14.	Se muestra mensaje de inicio de migración de la información
+15.	Se muestra mensaje una vez finalizado el proceso de migración
+
+![alt text](https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/fin.png)
+
+16.	Se presiona tecla para cerrar el programa
 
 
 ---
