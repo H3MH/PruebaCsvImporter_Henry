@@ -3,6 +3,7 @@
     using Azure;
     using Azure.Storage.Blobs;
     using Azure.Storage.Blobs.Models;
+    using CsvImporter.Shell.Domain;
     using CsvImporter.Shell.Models;
     using System;
     using System.Collections.Generic;
