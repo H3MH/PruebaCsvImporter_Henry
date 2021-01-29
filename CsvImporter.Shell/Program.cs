@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Azure.Storage.Blobs;
+using System;
+using System.Configuration;
 using System.Threading.Tasks;
 
 namespace CsvImporter.Shell
@@ -22,7 +24,12 @@ namespace CsvImporter.Shell
 
         private static async Task Menu() 
         {
+            BlobServiceClient blobServiceClient = new BlobServiceClient(ConfigurationManager.ConnectionStrings["StorageConnectionString"].ToString());
             Console.WriteLine("Bienvenido a CsvImporter");
+            Console.WriteLine($"Blob: {blobServiceClient.AccountName}");
+            Console.WriteLine("Lista de Contenedores");
+            //AzureStorageClient azure = new AzureStorageClient();
+            //var containers = azure.ListContainers(blobServiceClient, "").GetAwaiter().GetResult();
         }
 
         private static void ErrorMessage(string message)
