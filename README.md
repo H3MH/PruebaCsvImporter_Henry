@@ -31,11 +31,13 @@ Desarrollar un programa de consola .NET Core en C#, que lea un fichero .csv alma
 ---
 ## Arquitectura
 
-### Diagramas
-https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/arquitectura.png
+### Diagrama
+https://github.com/
+![alt text](https://raw.githubusercontent.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/arquitectura.png)
 
 ### Logica
 https://github.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/logica.png
+![alt text](https://raw.githubusercontent.com/H3MH/PruebaCsvImporter_Henry/blob/main/assets/logica.png)
 
 ---
 ## Limitaciones
